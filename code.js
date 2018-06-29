@@ -1,8 +1,5 @@
 function isLeapYear(year) {
-    return !isCommonYear(year);
-}
-function isCommonYear(year) {
-    return year % 4 != 0 || (year % 100 == 0 && year % 400 != 0);
+    return new Date(year, 2 - 1, 29).getDate() == 29;
 }
 
 function unitTests() {
