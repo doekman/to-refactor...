@@ -1,11 +1,5 @@
 function isLeapYear(year) {
-    if (year % 4) {
-        return false;
-    }
-    if (year % 100) {
-        return true;
-    }
-    if (year % 400) {
+    if (year % 4 || (!(year % 100) && year % 400)) {
         return false;
     }
     return true;
