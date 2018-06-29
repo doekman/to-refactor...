@@ -1,5 +1,8 @@
 function isLeapYear(year) {
-    return !(year % 4 || (!(year % 100) && year % 4000));
+    return !isCommonYear(year);
+}
+function isCommonYear(year) {
+    return year % 4 || (!(year % 100) && year % 400);
 }
 
 function unitTests() {
